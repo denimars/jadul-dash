@@ -1,5 +1,4 @@
-# car_interface
-
+# JADUL DASH
 A just-for-fun project to replace the aging head unit in my car with something I built myself.
 
 ## The story
