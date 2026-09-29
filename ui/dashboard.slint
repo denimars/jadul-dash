@@ -4,6 +4,10 @@ export component DashboardWindow inherits Window {
     height: 600px;
     background: #111111;
 
+    // Android Auto connection status, updated from Rust
+    in property <string> status-text: "Waiting for USB connection...";
+    in property <bool> connected: false;
+
     // Main layout (horizontal: menu on the left, main screen on the right)
     horizontal-layout := HorizontalLayout {
         spacing: 10px;
@@ -51,8 +55,8 @@ export component DashboardWindow inherits Window {
             border-color: #333333;
 
             Text {
-                text: "Android Auto / Navigation Display\n(Waiting for USB connection...)";
-                color: #666666;
+                text: "Android Auto / Navigation Display\n(" + root.status-text + ")";
+                color: root.connected ? #4caf50 : #666666;
                 font-size: 16px;
                 horizontal-alignment: center;
                 vertical-alignment: center;

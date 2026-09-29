@@ -7,6 +7,7 @@ edition = "2024"
 slint = "1.5"
 tokio = { version = "1.0", features = ["full"] }
 android-auto = { version = "0.3", features = ["usb"] }
+async-trait = "0.1.92"
 
 [build-dependencies]
 slint-build = "1.5"
