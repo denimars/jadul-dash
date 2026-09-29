@@ -1,0 +1,62 @@
+export component DashboardWindow inherits Window {
+    title: "Car Dashboard - Rust";
+    width: 1024px;
+    height: 600px;
+    background: #111111;
+
+    // Main layout (horizontal: menu on the left, main screen on the right)
+    horizontal-layout := HorizontalLayout {
+        spacing: 10px;
+        padding: 10px;
+
+        // Side menu panel
+        Rectangle {
+            width: 200px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            
+            VerticalLayout {
+                spacing: 15px;
+                padding: 15px;
+                
+                Text { text: "CAR DASHBOARD"; color: #ffffff; font-weight: 700; }
+                
+                TouchArea {
+                    clicked => { /* Home button action */ }
+                    Rectangle {
+                        height: 40px;
+                        background: #2d2d2d;
+                        border-radius: 4px;
+                        Text { text: "Home / Menu"; color: #ffffff; vertical-alignment: center; horizontal-alignment: center; }
+                    }
+                }
+
+                TouchArea {
+                    clicked => { /* Android Auto button action */ }
+                    Rectangle {
+                        height: 40px;
+                        background: #0066cc;
+                        border-radius: 4px;
+                        Text { text: "Android Auto"; color: #ffffff; vertical-alignment: center; horizontal-alignment: center; }
+                    }
+                }
+            }
+        }
+
+        // Main area (where Android Auto video / map will be rendered)
+        Rectangle {
+            background: #000000;
+            border-radius: 8px;
+            border-width: 1px;
+            border-color: #333333;
+
+            Text {
+                text: "Android Auto / Navigation Display\n(Waiting for USB connection...)";
+                color: #666666;
+                font-size: 16px;
+                horizontal-alignment: center;
+                vertical-alignment: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+[package]
+name = "car_interface"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+slint = "1.5"
+tokio = { version = "1.0", features = ["full"] }
+android-auto = { version = "0.3", features = ["usb"] }
+
+[build-dependencies]
+slint-build = "1.5"
+

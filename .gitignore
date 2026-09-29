@@ -1,0 +1,25 @@
+# Rust build output
+/target
+
+# Backup files created by rustfmt
+**/*.rs.bk
+
+# Debug/profiling artifacts
+*.pdb
+perf.data*
+flamegraph.svg
+
+# Local environment and secrets
+.env
+.env.*
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
